@@ -1,15 +1,16 @@
 # openam-policy-eval-sample
 
-*An OpenAM Sample Policy Evaluation Plugin*
+*OpenAM Sample Policy Evaluation Plugins*
 
-For instructions on using this sample policy evaluation plugin
+For instructions on using these sample policy evaluation plugins
 with OpenAM see the chapter,
 *[Customizing Policy Evaluation](http://openam.forgerock.org/openam-documentation/openam-doc-source/doc/dev-guide/index/chap-policy-spi.html)*,
 in the OpenAM *Developer's Guide*.
 
-Before building the sample authentication module, update
-the OpenAM version in the POM to match the version of OpenAM
-that you are using. The line to update is:
+Before building the sample plugins,
+update the OpenAM version in the POM
+to match the version of OpenAM that you are using.
+The line to update is:
 
     <openam.version>12.0.0-SNAPSHOT</openam.version>
 
