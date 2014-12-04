@@ -39,6 +39,22 @@ public class SampleConditionType implements EntitlementCondition {
     public static final String LENGTH_FIELD = "nameLength";
     private int                nameLength   = 0; // Default minimum length
 
+    /**
+     * Minimum length of the subject's user name(s).
+     * @return Minimum length of the subject's user name(s).
+     */
+    public int getNameLength() {
+        return nameLength;
+    }
+
+    /**
+     * Set the minimum length for the subject's user name(s).
+     * @param nameLength Minimum length.
+     */
+    public void setNameLength(int nameLength) {
+        this.nameLength = nameLength;
+    }
+
     private String displayType;
 
     @Override
@@ -55,7 +71,7 @@ public class SampleConditionType implements EntitlementCondition {
     public void init(Map<String, Set<String>> map) {
         for (String key : map.keySet()) {
             if (key.equalsIgnoreCase(LENGTH_FIELD)) {
-                nameLength = Integer.parseInt(getInitStringValue(map.get(key)));
+                setNameLength(Integer.parseInt(getInitStringValue(map.get(key))));
             }
         }
     }
@@ -67,8 +83,8 @@ public class SampleConditionType implements EntitlementCondition {
     @Override
     public void setState(String state) {
         try {
-            JSONObject jo = new JSONObject(state);
-            nameLength = jo.getInt(LENGTH_FIELD);
+            JSONObject json = new JSONObject(state);
+            setNameLength(json.getInt(LENGTH_FIELD));
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -78,9 +94,9 @@ public class SampleConditionType implements EntitlementCondition {
     @Override
     public String getState() {
         try {
-            JSONObject jo = new JSONObject();
-            jo.put(LENGTH_FIELD, nameLength);
-            return jo.toString();
+            JSONObject json = new JSONObject();
+            json.put(LENGTH_FIELD, getNameLength());
+            return json.toString();
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -88,7 +104,7 @@ public class SampleConditionType implements EntitlementCondition {
 
     @Override
     public void validate() throws EntitlementException {
-        if (nameLength < 0) {
+        if (getNameLength() < 0) {
             throw new EntitlementException(
                     EntitlementException.INVALID_PROPERTY_VALUE, LENGTH_FIELD);
         }
@@ -117,7 +133,7 @@ public class SampleConditionType implements EntitlementCondition {
 
             String userName = userDn.substring(start + 1, end);
 
-            if (userName.length() < nameLength) {
+            if (userName.length() < getNameLength()) {
                 authorized = false;
             }
 

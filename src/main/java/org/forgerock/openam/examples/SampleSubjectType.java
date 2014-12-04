@@ -39,11 +39,27 @@ public class SampleSubjectType implements EntitlementSubject {
     public static final String NAME_FIELD = "name";
     private String name;
 
+    /**
+     * The authorized subject's user name.
+     * @return  The authorized subject's user name.
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Set the authorized subject's user name.
+     * @param name  The authorized subject's user name.
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public void setState(String state) {
         try {
             final JSONObject json = new JSONObject(state);
-            this.name = json.getString(NAME_FIELD);
+            this.setName(json.getString(NAME_FIELD));
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
@@ -53,7 +69,7 @@ public class SampleSubjectType implements EntitlementSubject {
     public String getState() {
         try {
             final JSONObject json = new JSONObject();
-            json.put(NAME_FIELD, name);
+            json.put(NAME_FIELD, getName());
             return json.toString();
         } catch (JSONException e) {
             throw new RuntimeException(e);
@@ -97,7 +113,7 @@ public class SampleSubjectType implements EntitlementSubject {
 
             String userName = userDn.substring(start + 1, end);
 
-            if (userName.equals(name)) {
+            if (userName.equals(getName())) {
                 authorized = true;
             }
 

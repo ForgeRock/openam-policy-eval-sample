@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Sample attribute provider that static "sample" attribute values.
+ * Sample attribute provider that sets a static "sample" attribute value.
  */
 public class SampleAttributeType implements ResourceAttribute {
     private String propertyName;
@@ -34,6 +34,14 @@ public class SampleAttributeType implements ResourceAttribute {
         propertyValues = new HashSet<String>();
         propertyValues.add("sample");
         return propertyValues;
+    }
+
+    /**
+     * This does nothing. Property values are always {@code sample}.
+     * @param values    These values are ignored.
+     */
+    public void setPropertyValues(Set<String> values) {
+        // Silently ignore values for this implementation.
     }
 
     @Override
