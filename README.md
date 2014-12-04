@@ -5,7 +5,7 @@
 Note: If you are using OpenAM 11.0.0, get the sample corresponding to that release.
 See <https://github.com/markcraig/openam-policy-eval-sample/releases/tag/v11.0.0>.
 
-DRAFT in progress...
+DRAFT in progress... doc is not rewritten yet
 
 For instructions on using these sample policy evaluation plugins
 with OpenAM 12.0.0 see the chapter,
@@ -17,9 +17,9 @@ update the OpenAM version in the POM
 to match the version of OpenAM that you are using.
 The line to update is:
 
-    <openam.version>12.0.0-SNAPSHOT</openam.version>
+    <openam.version>13.0.0-SNAPSHOT</openam.version>
 
-This sample is being tested with OpenAM 12.0.0-SNAPSHOT.
+This sample is being tested with OpenAM 13.0.0-SNAPSHOT.
 
 * * *
 This work is licensed under the Creative Commons
