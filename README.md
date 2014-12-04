@@ -2,9 +2,14 @@
 
 *OpenAM Sample Policy Evaluation Plugins*
 
+Note: If you are using OpenAM 11.0.0, get the sample corresponding to that release.
+See <https://github.com/markcraig/openam-policy-eval-sample/releases/tag/v11.0.0>.
+
+DRAFT in progress...
+
 For instructions on using these sample policy evaluation plugins
-with OpenAM 11.0.0 see the chapter,
-*[Customizing Policy Evaluation](http://docs.forgerock.org/en/openam/11.0.0/dev-guide/index/chap-policy-spi.html)*,
+with OpenAM 12.0.0 see the chapter,
+*[Customizing Policy Evaluation](http://docs.forgerock.org/en/openam/12.0.0/dev-guide/index/chap-policy-spi.html)*,
 in the OpenAM *Developer's Guide*.
 
 Before building the sample plugins,
@@ -12,9 +17,9 @@ update the OpenAM version in the POM
 to match the version of OpenAM that you are using.
 The line to update is:
 
-    <openam.version>11.0.0</openam.version>
+    <openam.version>12.0.0-SNAPSHOT</openam.version>
 
-This sample has been tried with OpenAM 11.0.0.
+This sample is being tested with OpenAM 12.0.0-SNAPSHOT.
 
 * * *
 This work is licensed under the Creative Commons
