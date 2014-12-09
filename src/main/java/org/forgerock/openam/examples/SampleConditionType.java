@@ -24,6 +24,7 @@ import org.json.JSONObject;
 
 import javax.security.auth.Subject;
 import java.security.Principal;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 
@@ -139,6 +140,6 @@ public class SampleConditionType implements EntitlementCondition {
 
         }
 
-        return new ConditionDecision(authorized, advices);
+        return new ConditionDecision(authorized, Collections.EMPTY_MAP);
     }
 }

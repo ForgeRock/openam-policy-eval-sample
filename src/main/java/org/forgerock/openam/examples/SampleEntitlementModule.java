@@ -25,8 +25,8 @@ import org.forgerock.openam.entitlement.EntitlementRegistry;
 public class SampleEntitlementModule implements EntitlementModule {
     @Override
     public void registerCustomTypes(EntitlementRegistry entitlementRegistry) {
-        entitlementRegistry.registerAttributeType("sample", SampleAttributeType.class);
-        entitlementRegistry.registerConditionType("sample", SampleConditionType.class);
-        entitlementRegistry.registerSubjectType("sample", SampleSubjectType.class);
+        entitlementRegistry.registerAttributeType("SampleAttribute", SampleAttributeType.class);
+        entitlementRegistry.registerConditionType("SampleCondition", SampleConditionType.class);
+        entitlementRegistry.registerSubjectType("SampleSubject", SampleSubjectType.class);
     }
 }

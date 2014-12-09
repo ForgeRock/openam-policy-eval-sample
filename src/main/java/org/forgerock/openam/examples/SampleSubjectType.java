@@ -119,7 +119,7 @@ public class SampleSubjectType implements EntitlementSubject {
 
         }
 
-        return new SubjectDecision(authorized, advices);
+        return new SubjectDecision(authorized, Collections.EMPTY_MAP);
     }
 
     @Override
