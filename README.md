@@ -57,7 +57,7 @@ For OpenAM deployed on Apache Tomcat under `/openam`:
 
     cp target/*.jar /path/to/tomcat/webapps/openam/WEB-INF/lib/
 
-Next, edit the `policyEditor/en/translation.json` file
+Next, edit the `policyEditor/locales/en/translation.json` file
 to add the strings used by the policy editor
 so that the policy editor shows the custom subject and condition.
 
