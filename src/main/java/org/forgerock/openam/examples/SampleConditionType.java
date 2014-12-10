@@ -115,7 +115,7 @@ public class SampleConditionType implements EntitlementCondition {
     public ConditionDecision evaluate(String realm,
                                       Subject subject,
                                       String resource,
-                                      Map<String, Set<String>> advices)
+                                      Map<String, Set<String>> environment)
             throws EntitlementException {
 
         boolean authorized = true;

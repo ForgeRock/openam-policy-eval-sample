@@ -94,7 +94,7 @@ public class SampleSubjectType implements EntitlementSubject {
                                     SubjectAttributesManager mgr,
                                     Subject subject,
                                     String resourceName,
-                                    Map<String, Set<String>> advices)
+                                    Map<String, Set<String>> environment)
             throws EntitlementException {
 
         boolean authorized = false;
