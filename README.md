@@ -1,10 +1,15 @@
 # OpenAM Sample Policy Evaluation Plugin
 
-Note: If you are using OpenAM 11.0.0, get the sample corresponding to that release.
-See <https://github.com/markcraig/openam-policy-eval-sample/releases/tag/v11.0.0>.
+This small project demonstrates an OpenAM plugin library
+that implements the service provider interfaces
+for evaluating policy and returning resource attributes.
 
-DRAFT in progress...
-This sample is being tested with OpenAM 13.0.0-SNAPSHOT.
+**Note**
+
+The current version was developed with OpenAM 12.0.0.
+
+If you are using OpenAM 11.0.0, get the sample corresponding to that release.
+See <https://github.com/markcraig/openam-policy-eval-sample/releases/tag/v11.0.0>.
 
 
 ## About the Sample Plugin
@@ -256,8 +261,71 @@ and the user token Id as the subject "ssoToken" value.
 
 To use the custom resource attribute, add "resourceAttributes" to the policy.
 
-    FixMe not working yet
+    curl \
+     --request PUT \
+     --header "iPlanetDirectoryPro: AQIC5wM2LY4Sfcw..." \
+     --header "Content-Type: application/json" \
+     --data '{
+        "name": "Sample Policy",
+        "active": true,
+        "description": "Try sample policy plugin",
+        "resources": [
+            "http://www.example.com:80/*"
+        ],
+        "applicationName": "iPlanetAMWebAgentService",
+        "actionValues": {
+            "GET": true
+        },
+        "subject": {
+            "type": "SampleSubject",
+            "name": "demo"
+        },
+        "condition": {
+            "type": "SampleCondition",
+            "nameLength": 4
+        },
+        "resourceAttributes": [
+            {
+                "type": "SampleAttribute",
+                "propertyName": "test"
+            }
+        ]
+    }' http://openam.example.com:8088/openam/json/policies/Sample%20Policy
 
+When you now request a policy decision,
+the plugin also returns the "test" attribute that you configured.
+
+    curl \
+     --request POST \
+     --header "iPlanetDirectoryPro: AQIC5wM2LY4Sfcw..." \
+     --header "Content-Type: application/json" \
+     --data '{
+        "subject": {
+          "ssoToken": "AQIC5wM2LY4Sfcy..."},
+        "resources": [
+            "http://www.example.com:80/index.html"
+        ],
+        "application": "iPlanetAMWebAgentService"
+     }' \
+     http://openam.example.com:8080/openam/json/policies?_action=evaluate
+
+    [
+        {
+            "resource": "http://www.example.com/profile",
+            "actions": {
+                "GET": true
+            },
+            "attributes": {
+                "test": [
+                    "sample"
+                ]
+            },
+            "advices": {}
+        }
+    ]
+
+If you made it this far, then you have successfully tested this plugin.
+Good luck building your own custom policy plugins!
 
 * * * * *
 
