@@ -165,9 +165,7 @@ in the top level realm of a fresh installation.
             "OR",
             "SampleSubject"
         ],
-        "attributeNames": [
-            "SampleAttribute"
-        ],
+        "attributeNames": [],
         "saveIndex": null,
         "searchIndex": null,
         "entitlementCombiner": "DenyOverride"
