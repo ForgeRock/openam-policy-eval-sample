@@ -32,7 +32,6 @@ import java.util.Set;
  */
 public class SampleAttributeType implements ResourceAttribute {
     private String propertyName;
-    private Set<String> propertyValues;
     private String pResponseProviderName;
 
     @Override
@@ -47,7 +46,7 @@ public class SampleAttributeType implements ResourceAttribute {
 
     @Override
     public Set<String> getPropertyValues() {
-        propertyValues = new HashSet<String>();
+        Set<String> propertyValues = new HashSet<String>();
         propertyValues.add("sample");
         return propertyValues;
     }
@@ -68,7 +67,7 @@ public class SampleAttributeType implements ResourceAttribute {
                                              Map<String, Set<String>> advices)
             throws EntitlementException {
         Map<String, Set<String>> map = new HashMap<String, Set<String>>();
-        map.put(propertyName, propertyValues);
+        map.put(propertyName, getPropertyValues());
         return map;
     }
 
@@ -87,7 +86,6 @@ public class SampleAttributeType implements ResourceAttribute {
         try {
             JSONObject json = new JSONObject();
             json.put("propertyName", propertyName);
-            json.put("propertyValues", propertyValues);
             json.put("pResponseProviderName", pResponseProviderName);
             return json.toString();
         } catch (JSONException e) {
