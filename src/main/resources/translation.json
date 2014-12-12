@@ -54,7 +54,6 @@
         "unableToPersistPolicy": "Unable to persist policy in datastore",
         "policiesUploaded": "Policies uploaded successfully",
         "policiesUploadFailed": "Failed to upload policies"
-
       }
     },
     "AppConfiguration": {
@@ -65,6 +64,10 @@
   },
   "templates": {
     "user": {
+      "404": {
+        "pageNotFound": "Page not found",
+        "requestedPageCouldNotBeFound": "The requested page could not be found."
+      },
       "LoginDialog": {
         "refreshOnLogin": "Should refresh on login",
         "sessionEnded": "Sorry, your session has ended. To perform your requested action, please <a href='%s' target='_new'>Log in</a> again in a new window. After successful login, return to this window, close this dialog, and then attempt to perform your action again."
@@ -77,10 +80,6 @@
         "resetPassword": "Reset your password",
         "siteIdentificationHeader": "Site Identification",
         "siteIdentificationExplanation": "Please enter your login name.<br />Your site image and pass phrase will be displayed here."
-      },
-      "404": {
-        "pageNotFound": "Page not found",
-        "requestedPageCouldNotBeFound": "The requested page could not be found."
       },
       "DefaultBaseTemplate": {
         "orPhone": ", or phone"
@@ -233,7 +232,6 @@
       "googlePlus": "Google+"
     }
   },
-
   "policy": {
     "common": {
       "name": "Name",
@@ -247,32 +245,25 @@
       "notApplicable": "n/a",
       "select": "select...",
       "empty": "empty",
-
       "realm": "Realm",
       "application": "Application",
       "applicationBase": "Application Base",
-
       "responseAttributes": "Response attributes",
       "subjectAttributes": "Subject attributes",
       "availablePatterns": "Available patterns",
       "staticAttributes": "Static attributes",
-
       "realms": "Realms",
       "actions": "Actions",
       "resources": "Resources",
       "subjects": "Subjects",
       "environments": "Environments",
-
       "noRealms": "There are no realms...",
       "noActions": "There are no actions...",
       "noResources": "There are no resources...",
-
       "noStaticAttributes": "There are no Static attributes...",
       "noSubjectAttributes": "There are no Subject attributes...",
-
       "viewAllApplications": "View all Applications inside",
       "topLeveRealm": "Top Level Realm",
-
       "buttons": {
         "deleteSelected": "Delete Selected",
         "finish": "Finish",
@@ -280,41 +271,39 @@
       },
       "type": "Type",
       "weekdays": {
-          "Monday": {
-              "short": "mon",
-              "full": "Monday"
-          },
-          "Tuesday": {
-              "short": "tue",
-              "full": "Tuesday"
-          },
-          "Wednesday": {
-              "short": "wed",
-              "full": "Wednesday"
-          },
-          "Thursday": {
-              "short": "thu",
-              "full": "Thursday"
-          },
-          "Friday": {
-              "short": "fri",
-              "full": "Friday"
-          },
-          "Saturday": {
-              "short": "sat",
-              "full": "Saturday"
-          },
-          "Sunday": {
-              "short": "sun",
-              "full": "Sunday"
-          }
+        "Monday": {
+          "short": "mon",
+          "full": "Monday"
+        },
+        "Tuesday": {
+          "short": "tue",
+          "full": "Tuesday"
+        },
+        "Wednesday": {
+          "short": "wed",
+          "full": "Wednesday"
+        },
+        "Thursday": {
+          "short": "thu",
+          "full": "Thursday"
+        },
+        "Friday": {
+          "short": "fri",
+          "full": "Friday"
+        },
+        "Saturday": {
+          "short": "sat",
+          "full": "Saturday"
+        },
+        "Sunday": {
+          "short": "sun",
+          "full": "Sunday"
+        }
       }
     },
-
-      "documentation": {
-         "tooltip": "Click to read more (opens in new tab)"
-      },
-
+    "documentation": {
+      "tooltip": "Click to read more (opens in new tab)"
+    },
     "manageApplications": {
       "add": "Add New Application",
       "importPolicies": "Import Policies",
@@ -322,7 +311,6 @@
       "title": "Applications",
       "description": "Applications act as a template for Policies, and group Policies together for easier management.<br>To create an Application, click Add New Application. To edit an Application, click the Edit Application icon. To view the Policies within an Application, click the Application name. To delete an Application, select it, and then click Delete Selected."
     },
-
     "editApplications": {
       "editApplication": "Edit Application",
       "title": "Create Application",
@@ -332,13 +320,11 @@
       "step3": "Step 3: Review Configuration and Finish",
       "viewPolicies": "View Policies"
     },
-
     "managePolicies": {
       "policies": "Policies",
       "add": "Add New Policy",
       "description": "Policies define the rules used to determine whether to grant or deny access to a resource.<br>To create a Policy, click Add New Policy. To edit a Policy, click the Policy name. To delete a Policy, select it, and then click Delete Selected."
     },
-
     "editPolicies": {
       "editPolicy": "Edit Policy",
       "title": "Create Policy",
@@ -354,14 +340,12 @@
       "manageRulesDescription": "To define rules, click the Condition or Logical buttons above, enter the relevant options, and then drag the block into place in the rule set above. Each block can be configured both before and after is has been moved. Only rules inside the rule set section will be included in the created policy. To edit a Condition, click the pencil icon, or double-click the item.",
       "logical": "Logical"
     },
-
     "manageReferrals": {
       "referrals": "Referrals",
       "add": "Add New Referral",
       "description": "Referrals enable Applications and Policies to exist in different Realms, and redirect requests to those Realms as required.<br>To create a Referral, click Add New Referral. To edit a Referral, click the Referral name. To delete a Referral, select it, and then click Delete Selected.",
       "andReferrals": "&amp; Referrals"
     },
-
     "editReferrals": {
       "editReferral": "Edit Referral",
       "title": "Create Referral",
@@ -373,22 +357,17 @@
       "selectRealmsDescription": "Referrals can only redirect to a sibling or child Realm. Select a Realm in the Available realms field, and then click the Add button. To remove a Realm, click the Delete button.",
       "selectRealmsPlaceholder": "Available realms..."
     },
-
-
     "actions": {
       "allow": "Allow",
       "deny": "Deny",
       "allowed": "Allowed",
       "denied": "Denied"
     },
-
     "responseAttributes": {
       "subjectAttributesDescription": "Use the drop down list or start typing to search for Subject attributes.",
       "subjectAttributesPlaceholder": "Select or search for Subject attributes"
     },
-
     "summaryReview": {
-
       "noName": "There is no name...",
       "noSubjectConditions": "There are no Subject Conditions...",
       "noSubjectAttributes": "There are no Subject attributes...",
@@ -399,163 +378,158 @@
       "advancedFalse": "Switch to <a href='#' id='toggleAdvanced'>maximized</a> view.",
       "advancedTrue": "Switch to <a href='#' id='toggleAdvanced'>minimized</a> view."
     },
-
     "addResources": {
       "patternDescription": "Select a pattern from the list below",
       "resourceDescription": "Create your resources"
     },
-
-      "operators": {
-          "NOT": "NOT",
-          "OR": "OR",
-          "AND": "AND"
+    "operators": {
+      "NOT": "NOT",
+      "OR": "OR",
+      "AND": "AND"
+    },
+    "subjectTypes": {
+      "SampleSubject": {
+        "title": "Sample Subject",
+        "props": {
+          "name": "Name"
+        }
       },
-
-      "subjectTypes": {
-          "SampleSubject": {
-            "title": "Sample Subject",
-            "props": {
-              "name": "Name"
-            }
-          },
-          "AuthenticatedUsers": {
-              "title": "Authenticated Users",
-              "props": {}
-          },
-          "Identity": {
-              "title": "Users & Groups",
-              "props": {
-                  "subjectValues": "Subject Values",
-                  "users": "User Subjects",
-                  "groups": "Group Subjects"
-              },
-              "placeholder" : "Search for subjects"
-          },
-          "JwtClaim": {
-              "title": "OpenID Connect/JWT Claim",
-              "props": {
-                  "claimName": "Claim Name",
-                  "claimValue": "Claim Value"
-              }
-          },
-          "NONE": {
-              "title": "Any User",
-              "props": {}
-          }
+      "AuthenticatedUsers": {
+        "title": "Authenticated Users",
+        "props": {}
       },
-
-      "conditionTypes": {
-        "SampleCondition": {
-          "title": "Sample Condition",
-          "props": {
-            "nameLength": "Min. username length"
-          }
+      "Identity": {
+        "title": "Users & Groups",
+        "props": {
+          "subjectValues": "Subject Values",
+          "users": "User Subjects",
+          "groups": "Group Subjects"
         },
-        "AMIdentityMembership": {
-              "title": "Identity Membership",
-              "props": {
-                  "amIdentityName": "AM Identity Name"
-              }
-          },
-          "AuthLevel": {
-              "title": "Authentication Level (greater than or equal to)",
-              "props": {
-                  "authLevel": "Authentication Level"
-              }
-          },
-          "AuthScheme": {
-              "title": "Authentication by Module Instance",
-              "props": {
-                  "authScheme": "Authentication Scheme",
-                  "applicationIdleTimeout": "Application Idle Timeout Scheme",
-                  "applicationName": "Application Name"
-              }
-          },
-          "AuthenticateToRealm": {
-              "title": "Authentication to a Realm",
-              "props": {
-                  "authenticateToRealm": "Authenticate to a Realm"
-              }
-          },
-          "AuthenticateToService": {
-              "title": "Authentication by Module Chain",
-              "props": {
-                  "authenticateToService": "Authenticate To Service"
-              }
-          },
-          "IPv4": {
-              "title": "IPv4 Address/DNS Name",
-              "props": {
-                  "ipRange": "IP Range",
-                  "dnsName": "DNS Name",
-                  "startIp": "Start IP",
-                  "endIp": "End IP"
-              }
-          },
-          "IPv6": {
-              "title": "IPv6 Address/DNS Name",
-              "props": {
-                  "ipRange": "IP Range",
-                  "dnsName": "DNS Name",
-                  "startIp": "Start IP",
-                  "endIp": "End IP"
-              }
-          },
-          "LDAPFilter": {
-              "title": "LDAP Filter Condition",
-              "props": {
-                  "ldapFilter": "LDAP Filter"
-              }
-          },
-          "LEAuthLevel": {
-              "title": "Authentication Level (less than or equal to)",
-              "props": {
-                  "authLevel": "Authentication Level"
-              }
-          },
-          "OAuth2Scope": {
-              "title": "OAuth2 Scope",
-              "props": {
-                  "requiredScopes": "Scopes"
-              }
-          },
-          "ResourceEnvIP": {
-              "title": "Resource/Environment/IP Address",
-              "props": {
-                  "resourceEnvIPConditionValue": "Resource/Environment/IP Address"
-              }
-          },
-          "Session": {
-              "title": "Active Session Time",
-              "props": {
-                  "maxSessionTime": "Max Session Time",
-                  "terminateSession": "Terminate Session"
-              }
-          },
-          "SessionProperty": {
-              "title": "Current Session Properties",
-              "props": {
-                  "ignoreValueCase": "Ignore Value Case",
-                  "properties": "Properties"
-              }
-          },
-          "SimpleTime": {
-              "title": "Time (day, date, time, and timezone)",
-              "props": {
-                  "startTime": "Start Time",
-                  "endTime": "End Time",
-                  "startDay": "Start Day",
-                  "endDay": "End Day",
-                  "startDate": "Start Date",
-                  "endDate": "End Date",
-                  "enforcementTimeZone": "Time Zone",
-                  "enterTimeZone": "Enter Time Zone"
-              },
-              "helper": "A time condition must contain one or more of the following values: Time (Start and End), Day (Start and End), Date (Start and End) and/or Time Zone."
-          },
-
-          "legacyFormat": "This condition is in a legacy format, and should be replaced.",
-          "nothingSelected": "Nothing selected"
+        "placeholder": "Search for subjects"
+      },
+      "JwtClaim": {
+        "title": "OpenID Connect/JWT Claim",
+        "props": {
+          "claimName": "Claim Name",
+          "claimValue": "Claim Value"
+        }
+      },
+      "NONE": {
+        "title": "Never Match",
+        "props": {}
       }
+    },
+    "conditionTypes": {
+      "SampleCondition": {
+        "title": "Sample Condition",
+        "props": {
+          "nameLength": "Min. username length"
+        }
+      },
+      "AMIdentityMembership": {
+        "title": "Identity Membership",
+        "props": {
+          "amIdentityName": "AM Identity Name"
+        }
+      },
+      "AuthLevel": {
+        "title": "Authentication Level (greater than or equal to)",
+        "props": {
+          "authLevel": "Authentication Level"
+        }
+      },
+      "AuthScheme": {
+        "title": "Authentication by Module Instance",
+        "props": {
+          "authScheme": "Authentication Scheme",
+          "applicationIdleTimeout": "Application Idle Timeout Scheme",
+          "applicationName": "Application Name"
+        }
+      },
+      "AuthenticateToRealm": {
+        "title": "Authentication to a Realm",
+        "props": {
+          "authenticateToRealm": "Authenticate to a Realm"
+        }
+      },
+      "AuthenticateToService": {
+        "title": "Authentication by Module Chain",
+        "props": {
+          "authenticateToService": "Authenticate To Service"
+        }
+      },
+      "IPv4": {
+        "title": "IPv4 Address/DNS Name",
+        "props": {
+          "ipRange": "IP Range",
+          "dnsName": "DNS Name",
+          "startIp": "Start IP",
+          "endIp": "End IP"
+        }
+      },
+      "IPv6": {
+        "title": "IPv6 Address/DNS Name",
+        "props": {
+          "ipRange": "IP Range",
+          "dnsName": "DNS Name",
+          "startIp": "Start IP",
+          "endIp": "End IP"
+        }
+      },
+      "LDAPFilter": {
+        "title": "LDAP Filter Condition",
+        "props": {
+          "ldapFilter": "LDAP Filter"
+        }
+      },
+      "LEAuthLevel": {
+        "title": "Authentication Level (less than or equal to)",
+        "props": {
+          "authLevel": "Authentication Level"
+        }
+      },
+      "OAuth2Scope": {
+        "title": "OAuth2 Scope",
+        "props": {
+          "requiredScopes": "Scopes"
+        }
+      },
+      "ResourceEnvIP": {
+        "title": "Resource/Environment/IP Address",
+        "props": {
+          "resourceEnvIPConditionValue": "Resource/Environment/IP Address"
+        }
+      },
+      "Session": {
+        "title": "Active Session Time",
+        "props": {
+          "maxSessionTime": "Max Session Time",
+          "terminateSession": "Terminate Session"
+        }
+      },
+      "SessionProperty": {
+        "title": "Current Session Properties",
+        "props": {
+          "ignoreValueCase": "Ignore Value Case",
+          "properties": "Properties"
+        }
+      },
+      "SimpleTime": {
+        "title": "Time (day, date, time, and timezone)",
+        "props": {
+          "startTime": "Start Time",
+          "endTime": "End Time",
+          "startDay": "Start Day",
+          "endDay": "End Day",
+          "startDate": "Start Date",
+          "endDate": "End Date",
+          "enforcementTimeZone": "Time Zone",
+          "enterTimeZone": "Enter Time Zone"
+        },
+        "helper": "A time condition must contain one or more of the following values: Time (Start and End), Day (Start and End), Date (Start and End) and/or Time Zone."
+      },
+      "legacyFormat": "This condition is in a legacy format, and should be replaced.",
+      "nothingSelected": "Nothing selected"
+    }
   }
 }
