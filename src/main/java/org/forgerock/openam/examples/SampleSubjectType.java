@@ -107,7 +107,7 @@ public class SampleSubjectType implements EntitlementSubject {
             int end   = userDn.indexOf(',');
             if (end <= start) {
                 throw new EntitlementException(
-                        EntitlementException.CONDITION_EVALUTATION_FAILED,
+                        EntitlementException.CONDITION_EVALUATION_FAILED,
                         "Name is not a valid DN: " + userDn);
             }
 
