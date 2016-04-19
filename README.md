@@ -1,5 +1,10 @@
 # OpenAM Sample Policy Evaluation Plugin
 
+## Warning
+**This code is not supported by ForgeRock and it is your responsibility to verify that the software is suitable and safe for use.**
+
+## About
+
 This small project demonstrates an OpenAM plugin library
 that implements the service provider interfaces
 for evaluating policy and returning resource attributes.
