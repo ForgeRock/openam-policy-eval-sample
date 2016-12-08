@@ -2,7 +2,7 @@
 <!--
    DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
-   Copyright (c) 2013-2014 ForgeRock AS. All Rights Reserved
+   Copyright (c) 2013-2016 ForgeRock AS. All Rights Reserved
 
    The contents of this file are subject to the terms
    of the Common Development and Distribution License
@@ -34,18 +34,18 @@
     <packaging>jar</packaging>
 
     <properties>
-        <openam.version>13.0.0-SNAPSHOT</openam.version>
+        <openam.version>12.0.0</openam.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
      <repositories>
         <repository>
-            <id>forgerock-releases</id>
-            <url>http://maven.forgerock.org/repo/releases</url>
+            <id>forgerock-staging-repository</id>
+            <url>https://maven.forgerock.org/repo/releases</url>
         </repository>
         <repository>
-            <id>forgerock-snapshots</id>
-            <url>http://maven.forgerock.org/repo/snapshots</url>
+            <id>forgerock-snapshots-repository</id>
+            <url>https://maven.forgerock.org/repo/snapshots</url>
         </repository>
     </repositories>
 
