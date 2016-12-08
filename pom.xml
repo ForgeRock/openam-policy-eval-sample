@@ -40,12 +40,12 @@
 
      <repositories>
         <repository>
-            <id>forgerock-releases</id>
-            <url>http://maven.forgerock.org/repo/releases</url>
+            <id>forgerock-staging-repository</id>
+            <url>https://maven.forgerock.org/repo/releases</url>
         </repository>
         <repository>
-            <id>forgerock-snapshots</id>
-            <url>http://maven.forgerock.org/repo/snapshots</url>
+            <id>forgerock-snapshots-repository</id>
+            <url>https://maven.forgerock.org/repo/snapshots</url>
         </repository>
     </repositories>
 
